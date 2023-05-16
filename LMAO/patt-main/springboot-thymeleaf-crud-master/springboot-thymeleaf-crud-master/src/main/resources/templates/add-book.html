@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Vape</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+ 
+<body>
+	<style>
+		body {
+			 background-image: url('https://vape.hk/wp-content/uploads/2020/01/69769628_373257353341276_6948038336418152448_o.jpg__nc_cat100_nc_ohc1B30ZefoJ1IAX-BCDfw_nc_htscontent-nrt1-1.jpg');
+			  height: 100vh; background-size: cover; background-repeat: no-repeat;
+		}
+		
+	</style>
+    <div class="" style="color: white;"> 
+        <h3> Add Vape</h3>
+        <div class="">
+            <div class="">
+                <div class="col-md-10">
+                    <form action="#" th:action="@{/addbook}" th:object="${book}"
+                                                                       method="post">
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">Vape Type</label> 
+                                <input type="text" th:field="*{name}" class="form-control"
+                                            id="firstName" placeholder="Vape Type" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">Vape Brand</label> 
+                                <input type="text" th:field="*{author}" class="form-control"
+                                            id="lastName" placeholder="Brand" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Puffs</label> 
+                                <input type="text" th:field="*{noOfPages}" class="form-control"
+                                            id="noofpages" placeholder="Number of Puffs" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Quantity</label> 
+                                <input type="text" th:field="*{publication}" class="form-control"
+                                            id="publication" placeholder="Quantity" />
+                            </div>
+ 
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value=" Submit ">
+                            </div>
+ 
+                            <input type="hidden" id="id" th:field="*{id}">
+     
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+ 
+</html>
